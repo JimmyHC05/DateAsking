@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>A question for you</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Bagel+Fat+One&family=DM+Sans:wght@400;500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="card">
+ 
+    <!-- Step 1: the question -->
+    <section id="step-ask" class="step">
+      <h1>Mor Would you allow me to take you out on a date?</h1>
+      <p class="sub">Think it over. Take your time. (Not too much time.) Que yo la quiero ver.</p>
+      <div class="choices" id="choices">
+        <button type="button" id="yes" class="btn yes">Yes</button>
+        <button type="button" id="no" class="btn no">No</button>
+      </div>
+      <p class="hint" id="hint" aria-live="polite"></p>
+    </section>
+ 
+    <!-- Step 2: the details -->
+    <section id="step-form" class="step" hidden>
+      <h2>Yay! Let's plan it.</h2>
+      <p class="sub">Pick what sounds good and send it to me.</p>
+ 
+      <form id="date-form" novalidate>
+        <label>Su Nombre:
+          <input type="text" name="name" required autocomplete="name">
+        </label>
+ 
+        <fieldset>
+          <legend>What should we do?</legend>
+          <label class="chip"><input type="radio" name="activity" value="Sushi" required><span>Dinner</span></label>
+          <label class="chip"><input type="radio" name="activity" value="Coffee"><span>Coffee</span></label>
+          <label class="chip"><input type="radio" name="activity" value="Movie"><span>Movie</span></label>
+          <label class="chip"><input type="radio" name="activity" value="Hike"><span>Surprise me</span></label>
+        </fieldset>
+ 
+        <label>Which day works?
+          <input type="date" name="date" required>
+        </label>
+        <label>Which day works?
+          <input type="time" name="time" required>
+        </label>
+ 
+ 
+        <label>Anything else I should know?
+          <textarea name="note" rows="3" placeholder="Food allergies, favorite spots, ideas…"></textarea>
+        </label>
+ 
+        <!-- Spam trap: real people never see or fill this -->
+        <input type="text" name="_gotcha" tabindex="-1" autocomplete="off" class="trap" aria-hidden="true">
+ 
+        <button type="submit" class="btn yes wide" id="send">Send my answer</button>
+        <p class="error" id="error" role="alert"></p>
+      </form>
+    </section>
+ 
+    <!-- Step 3: done -->
+    <section id="step-done" class="step" hidden>
+      <h2>It's a date!</h2>
+      <p class="sub">Your answer is on its way. I'll be in touch soon.</p>
+    </section>
+ 
+  </main>
+  <script src="script.js"></script>
+</body>
+</html>
+ 

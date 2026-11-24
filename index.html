@@ -25,7 +25,7 @@
  
     <!-- Step 2: the details -->
     <section id="step-form" class="step" hidden>
-      <h2>Yay! Let's plan it.</h2>
+      <h2>Vamos, Let's plan it.</h2>
       <p class="sub">Pick what sounds good and send it to me.</p>
  
       <form id="date-form" novalidate>
@@ -35,20 +35,23 @@
  
         <fieldset>
           <legend>What should we do?</legend>
-          <label class="chip"><input type="radio" name="activity" value="Sushi" required><span>Dinner</span></label>
+          <label class="chip"><input type="radio" name="activity" value="Sushi" required><span>Sushi</span></label>
           <label class="chip"><input type="radio" name="activity" value="Coffee"><span>Coffee</span></label>
           <label class="chip"><input type="radio" name="activity" value="Movie"><span>Movie</span></label>
-          <label class="chip"><input type="radio" name="activity" value="Hike"><span>Surprise me</span></label>
+          <label class="chip"><input type="radio" name="activity" value="Hike"><span>Hike</span></label>
         </fieldset>
  
         <label>Which day works?
           <input type="date" name="date" required>
         </label>
-        <label>Which day works?
+        <label>A que hora le gustaria?
           <input type="time" name="time" required>
         </label>
  
- 
+        <label>Que flores a usted le gusta?
+          <textarea name="note" rows="3" placeholder="Lily, Rosas, Daisys..."></textarea>
+        </label>
+        
         <label>Anything else I should know?
           <textarea name="note" rows="3" placeholder="Food allergies, favorite spots, ideas…"></textarea>
         </label>
